@@ -8,6 +8,10 @@
     font-family: "Poppins", sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     /* Colors */
     --white-color: #fff;
@@ -426,6 +430,39 @@ header .navbar{
 
 }
 
+/* Footer Section Styling*/
+.footer-section {
+    padding: 20px 0;
+    background: var(--dark-color);
+}
+
+.footer-section .section-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-section :where(.copyright-text, .social-link, .policy-link, .separator) {
+    color: var(--white-color);
+}
+
+.footer-section .social-link-list .social-link {
+    font-size: var(--font-size-l);
+    margin: 0 5px;
+}
+
+.footer-section .social-link-list .social-link:hover {
+    color: var(--secondary-color);
+}
+
+.footer-section .policy-text .separator {
+    margin: 0 5px;
+}
+
+.footer-section .policy-text .policy-link:hover {
+    color: var(--secondary-color);
+}
+
 /* Responsive media query code for max width 1024px */
 @media screen and (max-width: 1024px) {
     .menu-section .menu-list{
@@ -578,5 +615,10 @@ header .navbar{
 
     .gallery-section .gallery-list .gallery-item {
     width: 100%;
+    }
+
+    .footer-section .section-content {
+        flex-direction: column;
+        gap: 20px;
     }
 }
